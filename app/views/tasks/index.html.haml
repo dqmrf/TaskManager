@@ -1,0 +1,17 @@
+%h2.page-heading Home
+
+%ul.nav.nav-tabs.tasks-tabs{role: "tablist"}
+  %li.active{role: "presentation"}
+    %a{href: "#active-tasks", data: {toggle: "tab"} } Active tasks
+  %li{role: "presentation"}
+    %a{href: "#completed-tasks", data: {toggle: "tab"}} Completed tasks
+
+=form_tag destroy_multiple_tasks_path, method: :delete, class: "batch-del-form", data: {remote: true} do
+  .tab-content.tasks-tab-content
+    %ul#active-tasks.list-group.tasks-list.tab-pane.active.sort-container{role: "tabpanel"}
+      =render "tasks/shared/tasks_list", tasks: @active_tasks, type: "active"
+    %ul#completed-tasks.list-group.tasks-list.tab-pane.sort-container{role: "tabpanel"}
+      =render "tasks/shared/tasks_list", tasks: @completed_tasks, type: "completed"
+
+  #index-links
+    =render "tasks/shared/index_links"

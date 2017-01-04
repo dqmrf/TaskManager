@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title Task Manager
+    =stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    =javascript_include_tag 'application', 'data-turbolinks-track' => true
+    =csrf_meta_tags
+  %body
+    .site-content
+      =render "nav"
+      #page-content.container.page-content
+        =render_flash
+        =yield
+      %footer.site-footer
+        .container
+          %p
+            © Powered by 
+            =link_to "Misha Pelykh", "https://github.com/misha-pelykh"
+            2016

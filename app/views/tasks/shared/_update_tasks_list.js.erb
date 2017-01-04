@@ -1,0 +1,3 @@
+$("#active-tasks").html("<%= j (render partial: "tasks/shared/tasks_list", locals: { tasks: active_tasks, type: "active" }) %>");
+$("#completed-tasks").html("<%= j (render partial: "tasks/shared/tasks_list", locals: { tasks: completed_tasks, type: "completed" }) %>");
+$("#index-links").html("<%= j (render partial: "tasks/shared/index_links") %>");

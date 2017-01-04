@@ -1,0 +1,9 @@
+=link_to 'New Task', new_task_path, class: "btn btn-success"
+-unless @tasks && @tasks.empty?
+  -if params[:action] == "sort_by_title"
+    =link_to "Sort by date", sort_by_date_tasks_path, data: {remote: true}, class: "btn btn-primary", type: "button"
+  -else
+    =link_to "Sort by title", sort_by_title_tasks_path, data: {remote: true}, class: "btn btn-primary", type: "button"
+  =button_tag "Check All", type: "button", data: {checkall: "true"}, class: "btn btn-default batch-del batch-del-checkall"
+  =button_tag "Uncheck all", type: "button",  data: {checkall: "false"}, class: "btn btn-default batch-del batch-del-checkall"
+  =submit_tag "Delete selected", method: :delete, type: "submit", data: { confirm: 'Are you sure?' }, class: "btn btn-danger batch-del-submit"

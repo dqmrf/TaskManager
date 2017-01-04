@@ -1,0 +1,33 @@
+.single-task
+  / Heading.
+  .task-heading
+    %h2
+      =@task.title
+      
+    -if @task.completed
+      %span.label.label-success
+        Completed
+    -else
+      %span.label.label-danger
+        Active
+
+  / Attributes.
+  .task-attributes
+    %p
+      %b Priority:
+      =@task.priority
+    %p
+      %b Due date:
+      =@task.due_date
+    %p
+      %b User:
+      =@task.user.full_name
+
+    %div.task-description
+      %p
+        %b Description:
+      %p
+        =@task.description
+
+  / Links.
+  =render "tasks/shared/links"

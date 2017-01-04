@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "bootstrap-datetimepicker"
+
+
+/**
+ * Layout _________________________________.
+ */
+.site-content
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  position: relative
+  min-height: 100vh
+
+.page-content
+  margin-bottom: 50px
+
+.site-footer
+  border-width: 1px
+  border: 1px solid #e7e7e7
+  background-color: #f8f8f8
+  border-radius: 4px
+  padding: 15px 15px 5px
+  margin-top: auto
+
+@media screen and (max-width: 768px)
+  .page-content
+    width: 100%
+
+
+/**
+ * Globals ________________________________.
+ */
+#error_explanation
+  ul
+    list-style-type: none
+    padding: 0
+
+form
+  margin-bottom: 25px
+
+.task-checkbox
+  input[type="checkbox"]
+    margin-left: 0
+
+.success
+  color: green
+.danger
+  color: red
+
+
+/**
+ * Headings _______________________________.
+ */
+h1.page-heading
+  margin-bottom: 30px
+h2.page-heading
+  margin-bottom: 25px

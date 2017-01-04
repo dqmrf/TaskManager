@@ -1,0 +1,51 @@
+Task Management Application
+
+Goal - build task management system using Ruby on Rails technology.
+
+Acceptance Criteria:
+
+1 Authentication system. User should be able to:
+  - sign up
+  - sign in
+  - sign out
+  1.1 User has next attributes:
+    - first name
+    - last name
+    - email
+  1.2 User receives email with activation link after sign up
+2 Home page. User should be able to:
+  - view all tasks (the list of all tasks which belong to user, display only title)
+  - by mousing hover a particular task the "edit" and "delete" links should appear next to the title
+  - create new task
+  - edit existing task
+  - delete existing task
+  - mark task as completed
+  - make it active again if task is completed
+  2.1 User can manage only his own tasks
+  2.2 Task has next attributes:
+       - title
+       - description
+       - priority
+       - due date
+  2.3 Basicaly there should be two lists, one is active tasks, another one is completed. By marking task as completed a task moves to appropriate list. 
+3 Task details page
+   - every title of the task on the home page is a link, by clicking the link user is taken to this page
+   - on this page user can see all the attributes of the task
+4 Edit task page
+   - by clicking "edit" link on the Home page user is taken to this page
+   - this page displays a form with task's data
+   - user should be able to edit any attribute
+   - validation rules should be applied
+      -- title can't be blank
+      -- priority should be a number
+      -- due date should be a future date
+      -- nice to have if there is client side validation as well
+   4.1 use datepicker for date input
+5 User should be able to make a batch delete on the Home page
+  - checkboxes next to each task, user checks some tasks and clicks button 'batch delete' which deletes selected tasks
+  - there should be two links/buttons: 'check all' and 'uncheck all'
+6 User should be able to sort the list on the Home page by title
+7 User twitter bootstrap for nice UI
+8 Few tests with Rspec (e.g. add a method `full name` to user model and add tests for it, add tests for validation rules)
+9 Try to use Ajax wherever it's possible (e.g. delete task on the home page), minimum page reloads
+10 use github to host the code, use heroku to deploy the app

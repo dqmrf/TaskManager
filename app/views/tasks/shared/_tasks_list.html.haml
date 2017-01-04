@@ -1,0 +1,17 @@
+-is_active = (type == "active" ? true : false)
+-if !tasks.empty?
+  -tasks.each do |task|
+    %li.list-group-item.sort-element{id: "tasks-list-element_#{task.id}"}
+      .actions.left_actions
+        =check_box_tag "tasks[]", task.id, false, class: "batch-del batch-del-checkbox"
+        =link_to task.title, task, class: "sort-field_title"
+      .actions.rigth_actions.btn-group.animated{role: "group"}
+        -if is_active
+          =link_to "Complete", complete_task_path(task), data: { remote: true }, class: "complete_task btn btn-default btn-sm"
+        -else
+          =link_to "Make active", make_active_task_path(task), data: { remote: true }, class: "make_task_active btn btn-default btn-sm"
+        =link_to "Edit", edit_task_path(task), class: "btn btn-default btn-sm"
+        =link_to "Delete", task, method: :delete, data: { confirm: 'Are you sure?', remote: true }, id: "del_task-#{task.id}", class: "btn btn-danger btn-sm task-delete"
+-else
+  %li.list-group-item.empty-item
+    .alert.alert-info Tasks not found!

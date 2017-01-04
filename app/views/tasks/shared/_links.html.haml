@@ -1,0 +1,6 @@
+-if action_name == "edit"
+  =link_to 'Show', @task, class: "btn btn-default"
+-if action_name == "show"
+  =link_to 'Edit', edit_task_path(@task), class: "btn btn-primary"
+  =link_to 'Delete', @task, method: :delete, data: { confirm: 'Are you sure?' }, id: "del_task-#{@task.id}", class: "btn btn-danger"
+=link_to 'Back', tasks_path, class: "btn btn-default"

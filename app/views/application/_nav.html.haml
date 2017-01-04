@@ -1,0 +1,30 @@
+%nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      =link_to "TaskManager", root_path, {class: "navbar-brand"}
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li=link_to "Tasks", root_path
+      %ul.nav.navbar-nav.navbar-right
+        -if current_user
+          %li
+            %span.navbar-text 
+              Signed in as
+              %b=current_user.email
+            %li
+              =link_to destroy_session_path('user'), method: :delete do
+                %i.glyphicon.glyphicon-log-out
+                Sign out
+        -else
+          %li
+            =link_to new_registration_path(resource_name) do
+              Sign up
+          %li
+            =link_to new_session_path('user') do
+              Sign in
+              %i.glyphicon.glyphicon-log-in
