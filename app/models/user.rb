@@ -1,10 +1,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, :omniauthable, :confirmable,
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
-  # devise :database_authenticatable, :registerable, :confirmable,
-  #        :recoverable, :rememberable, :trackable, :validatable
   
   has_many :tasks, dependent: :destroy
   accepts_nested_attributes_for :tasks, allow_destroy: true

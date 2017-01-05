@@ -18,14 +18,12 @@
 //= require bootstrap-sprockets
 //= require moment
 //= require bootstrap-datetimepicker
-;(function($, window, document, undefined) {
+;var Application = (function($, window, document, undefined) {
 
-  // Global variables.
   var forEach = Array.prototype.forEach,
       slice = Array.prototype.slice;
 
-  // Application object.
-  var Application = {
+  var app = {
 
     init: function() {
       this.batchDeletion();
@@ -71,57 +69,58 @@
       }
     },
 
-    sortingByFields: function() {
-      var containers = document.getElementsByClassName('sort-container')
+    // sortingByFields: function() {
+    //   var containers = document.getElementsByClassName('sort-container')
 
-      if (containers.length == 0) return;
+    //   if (containers.length == 0) return;
 
-      document.addEventListener("click", checkIfSortBtn);
+    //   document.addEventListener("click", checkIfSortBtn);
 
-      function checkIfSortBtn(e) {
-        var target = e.target;
+    //   function checkIfSortBtn(e) {
+    //     var target = e.target;
 
-        while (target != document) {
-          if (target.classList.contains('sort-by')) {
-            sort(target);
-            return;
-          }
-          target = target.parentNode;
-        }
-      }
+    //     while (target != document) {
+    //       if (target.classList.contains('sort-by')) {
+    //         sort(target);
+    //         return;
+    //       }
+    //       target = target.parentNode;
+    //     }
+    //   }
 
-      function sort(button) {
-        var sortFieldClass = 'sort-field_' + button.dataset.sortField;
+    //   function sort(button) {
+    //     var sortFieldClass = 'sort-field_' + button.dataset.sortField;
 
-        forEach.call(containers, function(container, i) {
-          var sortElementsArr = [];
+    //     forEach.call(containers, function(container, i) {
+    //       var sortElementsArr = [];
 
-          forEach.call(container.getElementsByClassName('sort-element'), function(sortElement, i) {
-              if (sortElement.nodeType == 1) {
-                sortElementsArr.push(sortElement);
-              }
-          });
+    //       forEach.call(container.getElementsByClassName('sort-element'), function(sortElement, i) {
+    //           if (sortElement.nodeType == 1) {
+    //             sortElementsArr.push(sortElement);
+    //           }
+    //       });
 
-          sortElementsArr.sort(function(a, b){
-            var fieldA = a.getElementsByClassName(sortFieldClass)[0],
-                fieldB = b.getElementsByClassName(sortFieldClass)[0];
+    //       sortElementsArr.sort(function(a, b){
+    //         var fieldA = a.getElementsByClassName(sortFieldClass)[0],
+    //             fieldB = b.getElementsByClassName(sortFieldClass)[0];
 
-            if (!(fieldA || fieldB)) return;
+    //         if (!(fieldA || fieldB)) return;
 
-            return fieldA.textContent.toLowerCase().localeCompare(fieldB.textContent.toLowerCase());
-          });
+    //         return fieldA.textContent.toLowerCase().localeCompare(fieldB.textContent.toLowerCase());
+    //       });
 
-          sortElementsArr.forEach(function(sortElement, i){
-            container.appendChild(sortElement);
-          });
-        });
-      }
-    }
+    //       sortElementsArr.forEach(function(sortElement, i){
+    //         container.appendChild(sortElement);
+    //       });
+    //     });
+    //   }
+    // }
   };
 
-  // Application object initialization.
-  $(document).on("turbolinks:load", function(){
-    Application.init();
-  });
-
+  return app;
 }(window.Zepto || window.jQuery, window, document));
+
+// Application object initialization.
+$(document).on("turbolinks:load", function(){
+  Application.init();
+});

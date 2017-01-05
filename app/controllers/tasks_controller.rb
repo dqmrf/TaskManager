@@ -14,8 +14,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @user = current_user
-    @task = @user.tasks.build()
+    @task = current_user.tasks.build()
   end
 
   # GET /tasks/1/edit
@@ -111,7 +110,7 @@ class TasksController < ApplicationController
     end
 
     def set_task
-      if current_user == Task.find(params[:id]).user
+      if Task.exists?(params[:id]) && current_user == Task.find(params[:id]).user
         @task = Task.find(params[:id])
       end
       render_404 unless @task
