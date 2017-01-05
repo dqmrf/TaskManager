@@ -18,7 +18,7 @@
 //= require bootstrap-sprockets
 //= require moment
 //= require bootstrap-datetimepicker
-;var Application = (function($, window, document, undefined) {
+var Application = (function($, window, document, undefined) {
 
   var forEach = Array.prototype.forEach,
       slice = Array.prototype.slice;
