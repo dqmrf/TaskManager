@@ -1,39 +1,39 @@
 /* Globals ____________________________
  */
-/* line 6, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 6, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .batch-del-form .batch-del-checkbox {
   margin: 0 8px 0 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   cursor: pointer;
 }
-/* line 10, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 10, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .batch-del-form .batch-del-submit {
   visibility: hidden;
 }
-/* line 12, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 12, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .batch-del-form .batch-del-submit.active {
   visibility: visible;
 }
 
 /* Index ______________________________
  */
-/* line 19, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 19, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .nav.tasks-tabs {
   margin-bottom: 0;
   border-bottom: 0;
 }
-/* line 22, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 22, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .nav.tasks-tabs > li {
   z-index: 1;
 }
 
-/* line 28, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 28, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .tasks-tab-content .tab-pane:first-child .list-group-item:first-child {
   border-top-left-radius: 0px;
 }
 
-/* line 32, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 32, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .list-group.tasks-list .list-group-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,7 +45,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/* line 36, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 36, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .list-group.tasks-list .list-group-item .actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,24 +57,29 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/* line 40, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 40, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .list-group.tasks-list .list-group-item .actions.animated {
   visibility: hidden;
 }
-/* line 44, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 44, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .list-group.tasks-list .list-group-item:hover .actions.animated {
   visibility: visible;
 }
-/* line 46, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 46, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .list-group.tasks-list .alert {
   width: 100%;
   margin: 10px 0;
 }
 
+/* line 51, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
+#index-links .btn {
+  margin-bottom: 6px;
+}
+
 /**
  * Show ______________________________
  */
-/* line 55, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/tasks.sass */
+/* line 58, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/tasks.sass */
 .single-task .task-heading, .single-task .task-attributes {
   margin-bottom: 20px;
 }
@@ -9324,7 +9329,7 @@ button.close {
 /**
  * Layout _________________________________.
  */
-/* line 25, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 25, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9340,12 +9345,12 @@ button.close {
   min-height: 100vh;
 }
 
-/* line 32, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 32, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 .page-content {
   margin-bottom: 50px;
 }
 
-/* line 35, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 35, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 .site-footer {
   border-width: 1px;
   border: 1px solid #e7e7e7;
@@ -9355,37 +9360,43 @@ button.close {
   margin-top: auto;
 }
 
-@media screen and (max-width: 768px) {
-  /* line 44, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+@media screen and (max-width: 767px) {
+  /* line 44, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
   .page-content {
     width: 100%;
+  }
+
+  /* line 46, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
+  .navbar-text {
+    display: block;
+    padding: 0 15px;
   }
 }
 /**
  * Globals ________________________________.
  */
-/* line 52, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 55, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 #error_explanation ul {
   list-style-type: none;
   padding: 0;
 }
 
-/* line 56, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 59, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 form {
   margin-bottom: 25px;
 }
 
-/* line 60, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 63, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 .task-checkbox input[type="checkbox"] {
   margin-left: 0;
 }
 
-/* line 63, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 66, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 .success {
   color: green;
 }
 
-/* line 65, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 68, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 .danger {
   color: red;
 }
@@ -9393,12 +9404,12 @@ form {
 /**
  * Headings _______________________________.
  */
-/* line 72, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 75, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 h1.page-heading {
   margin-bottom: 30px;
 }
 
-/* line 74, /opt/lampp/htdocs/public/tManager/app/assets/stylesheets/application.css.sass */
+/* line 77, /opt/lampp/htdocs/public/TaskManager/app/assets/stylesheets/application.css.sass */
 h2.page-heading {
   margin-bottom: 25px;
 }
