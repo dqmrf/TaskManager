@@ -22,4 +22,8 @@ module DeviseHelper
   def devise_error_messages?
     !resource.errors.empty?
   end
+
+  def devise_messages
+    devise_error_messages!
+  end
 end

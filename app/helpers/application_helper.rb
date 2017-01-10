@@ -42,8 +42,4 @@ module ApplicationHelper
   def get_flash_message(type, message)
     content_tag(:div, message, class: "alert alert-#{type} alert-noajax")
   end
-
-  def devise_messages
-    devise_error_messages!
-  end
 end
