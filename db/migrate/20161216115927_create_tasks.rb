@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.integer :priority
-      t.datetime :due_date
+      t.date :due_date
       t.boolean :completed, null: false, default: false
       t.references :user, index: true, foreign_key: true
 

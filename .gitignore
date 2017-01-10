@@ -59,4 +59,4 @@ node_modules
 .env
 
 # Assets
-# public/assets
+public/assets

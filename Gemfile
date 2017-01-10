@@ -18,7 +18,6 @@ gem 'bootstrap3-datetimepicker-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'pg'
 
 group :production do
@@ -37,7 +36,6 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'html2haml'
-  # gem 'sqlite3'
 end
 
 group :test do

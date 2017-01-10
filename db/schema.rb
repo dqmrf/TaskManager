@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20161216115927) do
     t.string   "title"
     t.text     "description"
     t.integer  "priority"
-    t.datetime "due_date"
+    t.date     "due_date"
     t.boolean  "completed",   default: false, null: false
     t.integer  "user_id"
     t.datetime "created_at",                  null: false
@@ -55,4 +55,5 @@ ActiveRecord::Schema.define(version: 20161216115927) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "tasks", "users"
 end
