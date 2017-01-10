@@ -57,6 +57,3 @@ node_modules
 
 # Enviroment variables
 .env
-
-# Assets
-public/assets
