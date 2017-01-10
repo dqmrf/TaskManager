@@ -25,6 +25,7 @@ module TManager
 
     # config.serve_static_files = true
     # config.assets.paths << "#{Rails}/vendor/assets"
+    config.assets.initialize_on_precompile = false
 
     # SASS
     config.sass.preferred_syntax = :sass
