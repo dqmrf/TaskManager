@@ -12,12 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/widgets/datepicker
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require moment
-//= require bootstrap-datepicker
 
 var Application = (function($, window, document, undefined) {
 
