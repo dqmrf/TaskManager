@@ -31,7 +31,7 @@ module TManager
     config.sass.preferred_syntax = :sass
 
     # Enable assets.
-    config.assets.enabled = true
+    # config.assets.enabled = true
 
     # Rails generators.
     config.generators do |g|
