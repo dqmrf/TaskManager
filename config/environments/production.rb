@@ -88,4 +88,6 @@ Rails.application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
+
+  RAILS_ENV=production bundle exec rake assets:precompile
 end
