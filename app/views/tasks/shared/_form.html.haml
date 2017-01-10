@@ -29,15 +29,3 @@
         =f.submit 'Save', class: "btn btn-success cli-walid_submit"
         =render "tasks/shared/links"
 
-:javascript
-  $(document).ready(function(){
-    $('.datetimepicker').datetimepicker({
-      format: 'DD-MM-YYYY',
-      minDate: "moment",
-      useCurrent: false,
-    });
-
-    console.log("#{@task.due_date}");
-  });
-
-  //$(".due_date").on()
