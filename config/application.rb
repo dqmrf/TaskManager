@@ -24,8 +24,8 @@ module TManager
     config.active_record.raise_in_transactional_callbacks = true
 
     # rake assets:precompile RAILS_ENV=development
-    config.serve_static_files = true
-    config.assets.paths << "#{Rails}/vendor/assets"
+    # config.serve_static_files = true
+    # config.assets.paths << "#{Rails}/vendor/assets"
 
     # SASS
     config.sass.preferred_syntax = :sass
