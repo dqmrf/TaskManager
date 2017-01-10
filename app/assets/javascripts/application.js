@@ -17,7 +17,7 @@
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require moment
-//= require bootstrap-datetimepicker
+//= require bootstrap-datepicker
 
 var Application = (function($, window, document, undefined) {
 
