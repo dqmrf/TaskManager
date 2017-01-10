@@ -28,7 +28,6 @@ var Application = (function($, window, document, undefined) {
 
     init: function() {
       this.batchDeletion();
-      // this.sortingByFields();
     },
 
     batchDeletion: function() {
