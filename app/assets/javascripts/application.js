@@ -56,7 +56,7 @@ var Application = (function($, window, document, undefined) {
               }
             }
 
-            checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+            checkedOne = Array.prototype.slice.call(checkboxes).some(function(x){x.checked});
 
             if (checkedOne) {
               buttonSubmit.classList.add('active');
