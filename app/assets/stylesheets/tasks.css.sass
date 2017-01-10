@@ -1,0 +1,58 @@
+/*
+ * Globals ____________________________
+ */
+.batch-del-form
+  .batch-del-checkbox
+    margin: 0 8px 0 0
+    flex-shrink: 0
+    cursor: pointer
+  .batch-del-submit
+    visibility: hidden
+    &.active
+      visibility: visible
+
+
+/*
+ * Index ______________________________
+ */
+.nav.tasks-tabs
+  margin-bottom: 0
+  border-bottom: 0
+  > li
+    z-index: 1
+    
+.tasks-tab-content
+  .tab-pane
+    &:first-child
+      .list-group-item:first-child
+        border-top-left-radius: 0px
+
+.list-group.tasks-list
+  .list-group-item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .actions
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &.animated
+        visibility: hidden
+    &:hover
+      .actions
+        &.animated
+          visibility: visible
+  .alert
+    width: 100%
+    margin: 10px 0
+
+#index-links
+  .btn
+    margin-bottom: 6px
+
+/**
+ * Show ______________________________
+ */
+.single-task
+  .task-heading, .task-attributes
+    margin-bottom: 20px

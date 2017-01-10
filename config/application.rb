@@ -23,9 +23,9 @@ module TManager
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    # rake assets:precompile RAILS_ENV=development
-    config.serve_static_files = true
-    config.assets.paths << "#{Rails}/vendor/assets"
+    # config.serve_static_files = true
+    # config.assets.paths << "#{Rails}/vendor/assets"
+    config.assets.initialize_on_precompile = false
 
     # SASS
     config.sass.preferred_syntax = :sass
