@@ -19,10 +19,7 @@
         =f.number_field :priority, class: "form-control cli-walid_subject"
       .form-group
         =f.label :due_date
-        .datetimepicker.input-group.date
-          =f.text_field :due_date, class: "form-control due_date", value: @task.due_date
-          %span.input-group-addon
-            %i.glyphicon.glyphicon-calendar
+        =f.text_field :due_date, class: "form-control due_date datepicker", value: "#{@task.due_date ? @task.due_date.strftime("%d-%m-%Y") : Time.now.strftime("%d-%m-%Y")}"
       .form-group
         =f.hidden_field :user_id
       .actions
@@ -31,9 +28,8 @@
 
 :javascript
   $(document).ready(function(){
-    $('.datetimepicker').datetimepicker({
-      format: 'DD-MM-YYYY',
-      minDate: "moment",
-      useCurrent: false,
+    $('.datepicker').datepicker({
+      dateFormat: "dd-mm-yy",
+      minDate: new Date(),
     });
   });
