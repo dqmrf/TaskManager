@@ -1,20 +1,22 @@
-development:
+default: &default
   adapter: postgresql
-  encoding: utf8
-  database: mware_development
-  pool: 5
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-test: &TEST
-  adapter: postgresql
-  encoding: utf8
-  database: mware_test
-  pool: 5
+development:
+  <<: *default
+  database: taskmanager4_development
+  username: debian
+  password: debian
+
+test:
+  <<: *default
+  database: taskmanager4_test
+  username: debian
+  password: debian
 
 production:
-  adapter: postgresql
-  encoding: utf8
-  database: mware_production
-  pool: 5
-
-# cucumber:
-#   <<: *TEST
+  <<: *default
+  database: taskmanager4_production
+  username: sample_app
+  password: <%= ENV['SAMPLE_APP_DATABASE_PASSWORD'] %>
